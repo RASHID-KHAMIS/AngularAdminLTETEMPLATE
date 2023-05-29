@@ -1,0 +1,60 @@
+<app-card title="Add Employee"><br>
+
+    <form >
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="firstName">
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="lastName">
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput placeholder="number">
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>City </mat-label>
+                    <input matInput placeholder="city">
+                  </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Gender</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let gender of genderValue">
+                        {{gender.value}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Role</mat-label>
+                    <mat-select>
+                      <mat-option *ngFor="let role of roleValue">
+                        {{role.value}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+        </div>
+          
+    </form>   
+    <button mat-raised-button color="primary"><mat-icon>save</mat-icon>Save</button>
+
+        <div class="app-card-button"> <button mat-raised-button color="warn" matDialogClose="yes">
+          <mat-icon>close</mat-icon>Close</button></div>
+</app-card>
